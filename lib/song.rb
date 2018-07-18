@@ -2,7 +2,7 @@ require 'pry'
 
 class Song
   
-  attr_accessor :name, :artist
+  attr_accessor :name, :artist_name
   @@all = Array.new
   
   def self.create
@@ -44,14 +44,10 @@ class Song
   end
   
   def self.new_from_filename(file)
-    # binding.pry
+    binding.pry
     data = file.split(" - ")
-      name = data.last.gsub(".mp3", "")
-      artist = data.first
-    song = Song.new
-    song.name = name
-    song.artist = artist
-    song
+    self.create_by_name(data.last.gsub(".mp3", "").strip)
+    song.artist_name = data.first
   end
   
 end
