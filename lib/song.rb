@@ -2,7 +2,7 @@ require 'pry'
 
 class Song
   
-  attr_accessor :name, :artist_name
+  attr_accessor :name, :artist
   @@all = Array.new
   
   def self.create
