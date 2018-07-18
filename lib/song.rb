@@ -48,9 +48,9 @@ class Song
     data = file.split(" - ")
     song = Song.new
     name = data.last.gsub(".mp3", "")
-    artist_name = data.first
+    artist = data.first
     song.name = name
-    song.artist = artist_name
+    song.artist = artist
     song.save
   end
   
