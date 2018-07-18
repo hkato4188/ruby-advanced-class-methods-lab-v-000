@@ -47,8 +47,10 @@ class Song
     # binding.pry
     data = file.split(" - ")
     song = Song.new
-    song.name = data.last.gsub(".mp3", "")
-    song.artist_name = data.first
+    name = data.last.gsub(".mp3", "")
+    artist_name = data.first
+    song.name = name
+    song.artist = artist_name
     song.save
   end
   
