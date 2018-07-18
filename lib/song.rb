@@ -41,9 +41,7 @@ class Song
   
   def self.alphabetical
     binding.pry
-    self.all.map do |song|
-      song.name <=> song.name
-    end
+    self.all.sort_by{|song| song.name}
   end
   
 end
