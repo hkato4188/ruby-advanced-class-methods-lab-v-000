@@ -2,7 +2,7 @@ require 'pry'
 
 class Song
   
-  attr_accessor :name
+  attr_accessor :name, :artist_name
   @@all = Array.new
   
   def self.create
@@ -45,7 +45,9 @@ class Song
   
   def self.new_from_filename(file)
     binding.pry
-    file.split(" - ")
+    data = file.split(" - ")
+    self.create_by_name(data)
+    
   end
   
 end
