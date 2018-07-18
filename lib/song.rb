@@ -54,7 +54,7 @@ class Song
     song
   end
   
-  def self.new_from_filename(file)
+  def self.create_from_filename(file)
     # binding.pry
     data = file.split(" - ")
     name = data.last.gsub(".mp3", "")
