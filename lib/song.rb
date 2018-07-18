@@ -51,7 +51,7 @@ class Song
     artist = data.first
     song.name = name
     song.artist = artist
-    song.save
+    song
   end
   
 end
