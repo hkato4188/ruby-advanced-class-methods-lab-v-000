@@ -46,8 +46,8 @@ class Song
   def self.new_from_filename(file)
     # binding.pry
     data = file.split(" - ")
-    name = data.last.gsub(".mp3", "")
-    artist = data.first
+      name = data.last.gsub(".mp3", "")
+      artist = data.first
     song = Song.new
     song.name = name
     song.artist = artist
