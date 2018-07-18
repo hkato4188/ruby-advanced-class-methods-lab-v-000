@@ -46,7 +46,7 @@ class Song
   def self.new_from_filename(file)
     binding.pry
     data = file.split(" - ")
-    self.create_by_name(data)
+    self.create_by_name(data.last.gsub("mp3", "").strip)
     
   end
   
