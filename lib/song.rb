@@ -47,7 +47,7 @@ class Song
     binding.pry
     data = file.split(" - ")
     self.create_by_name(data.last.gsub("mp3", "").strip)
-    
+    song.artist_name = data.first
   end
   
 end
